@@ -1,0 +1,152 @@
+* {
+  font-family: "Open Sans";
+  font-weight: 400;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  width: 100%;
+}
+
+section {
+  /*display: row;*/
+  width: 50%;
+  height: 100%;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-weight: 800;
+  width: 89%;
+  height: 65px;
+  margin: 0% 5.5% 7.5% 5.5%;
+  font-size: 45px;
+  display: block;
+  text-align: center;
+
+}
+
+h2 {
+  color: #455A64;
+  font-weight: 600;
+  font-size: 24px;
+  height: 40px;
+  margin: 7px 12px 0px 12px;
+  border-bottom: solid 2px #CFD8DC;
+  padding: 0px 0px 5px 2px;
+
+}
+
+input {
+  display: block;
+}
+
+.blue-box {
+  background-color: #455A64;
+  height: 100%;
+  display: block;
+}
+
+.bookmark-creator {
+  height: 50%;
+  margin: 167.5px 0px;
+}
+
+.logo {
+  width: 80px;
+  height: 60px;
+  margin-bottom: -10px;
+  /*align-self: flex-end;*/
+}
+
+.gray-box {
+  background-color: #CFD8DC;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.user-input-box {
+  width: 89%;
+  margin: 10% 5.5% 10% 5.5%;
+  height: 35px;
+  font-size: 20px;
+  padding: 4px;
+}
+
+::-webkit-input-placeholder {
+  color: #CFD8DC;
+}
+
+.enter-button {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  background-color: #FFC107;
+  width: 89%;
+  height: 30px;
+  margin: 0% 5.5%;
+}
+
+.enter-button:hover {
+  background-color: #FFD773;
+}
+
+.bookmark-card {
+  border: solid;
+  border-width: 2px;
+  border-color: #607D8B;
+  background-color: #FFFFFF;
+  width: auto;
+  height: 135px;
+  margin: 20px 20px 10px 20px;
+  box-sizing: border-box;
+}
+
+a.bookmark-url {
+  color: #607D8B;
+  display: inline-block;
+  border-bottom: solid 1px #F2F4F4;
+  height: 22px;
+}
+
+span.bookmark-link {
+  text-decoration: none;
+  display: block;
+  border-bottom: solid 2px #CFD8DC;
+  height: 24px;
+  display: block;
+  margin: 5px 12px 0px 12px;
+  padding: 14px 0px 40px 2px;
+}
+
+span.bookmark-link a{
+  text-decoration: none;
+}
+
+.button-flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bookmark-read-button, .bookmark-delete-button {
+  color: #455A64;
+  width: auto;
+  height: 15px;
+  margin: 7px 12px 0px 12px;
+  padding: 0px 0px 7px 2px;
+  background-color: #FFFFFF;
+  border: none;
+  border-bottom: solid 1px #F2F4F4;
+}
+
+.bookmark-read-button {
+
+}
+
+.bookmark-delete-button {
+}
