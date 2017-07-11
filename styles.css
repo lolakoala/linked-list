@@ -91,9 +91,10 @@ input {
   margin: 0% 5.5%;
 }
 
-.enter-button:hover {
+.enter-button:hover:enabled {
   background-color: #FFD773;
 }
+
 
 .bookmark-card {
   border: solid;
@@ -149,4 +150,12 @@ span.bookmark-link a{
 }
 
 .bookmark-delete-button {
+}
+
+.read-div {
+  background-color: #F2F4F4;
+}
+
+.read-button {
+  color: #F05A28;
 }
