@@ -6,11 +6,15 @@ titleInput.addEventListener('input', enableEnter);
 urlInput.addEventListener('input', enableEnter);
 
 function enableEnter() {
-  enterButton.removeAttribute("disabled");
+  if ((titleInput.value !== "") && (urlInput.value !== "")) {
+    enterButton.removeAttribute("disabled");
+  } else {
+    enterButton.setAttribute("disabled");
+  };
 };
 
-function makeCard() {
-
+function makeCard(event) {
+  event.preventDefault();
 
   var title = titleInput.value;
   var url = urlInput.value;
@@ -21,15 +25,9 @@ function makeCard() {
      alert("You must have both a title and a url to create a bookmark!");
    } else {bookmarkSection.appendChild(newBookmark);
    };
-
-
-
-
-};
+ };
 
 function createBookmark(title,url) {
-
-
   var newDiv = document.createElement('div');
   newDiv.classList.add('bookmark-card');
   newDiv.innerHTML = `<h2>${title}</h2>
@@ -40,52 +38,24 @@ function createBookmark(title,url) {
     <button class="bookmark-read-button">Read</button>
     <button class="bookmark-delete-button">Delete</button>`;
 
-
-
-
-
-    readButton = newDiv.querySelector('.bookmark-read-button');
     deleteButton = newDiv.querySelector('.bookmark-delete-button');
-    readButton.addEventListener('click', function() {
-    // toggle a class of .read on <a href>/span- the below code targets the span
-    // bookmarkLink.classList.toggle('.read');
-    // toggle a class of .read-div on div
-    newDiv.classList.toggle('.read-div');
-    // toggle a class of .read-button on button
-    readButton.classList.toggle('.read-button');
-    console.log("toggle check");
+
+
+  deleteButton.addEventListener('click', function() {
+    this.closest('.bookmark-card').remove();
   });
-
-
-
-
-
-    // read/delete button event listeners
-
 
 
 
   return newDiv;
 };
 
-enterButton.addEventListener('click', makeCard);
+$('.gray-box').on('click', '.bookmark-read-button', function () {
+      $(this).closest('.bookmark-card').toggleClass('read');
+      $(this).parents('.bookmark-card').find('.bookmark-url').toggleClass('read');
+      $(this).parents('.bookmark-card').find('.bookmark-read-button').toggleClass('read');
+      // console.log('readButton')
+    });
 
 
-// // When read button is clicked on each card (which functions indepedently),
-// readButton.addEventListener('click', toggleRead);
-// function toggleRead() {
-// // toggle a class of .read on <a href>/span- the below code targets the span
-// // bookmarkLink.classList.toggle('.read');
-// // toggle a class of .read-div on div
-// newDiv.classList.toggle('.read-div');
-// // toggle a class of .read-button on button
-// readButton.classList.toggle('.read-button');
-// console.log("toggle check");
-// };
-//
-// // When remove button is clicked, delete entire card from html
-// deleteButton.addEventListener('click', removeCard);
-//
-// function removeCard() {
-//
-// };
+enterButton.addEventListener('click', makeCard)

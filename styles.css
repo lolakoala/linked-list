@@ -66,6 +66,7 @@ input {
   background-color: #CFD8DC;
   height: 100%;
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 
 .user-input-box {
@@ -74,6 +75,10 @@ input {
   height: 35px;
   font-size: 20px;
   padding: 4px;
+}
+
+.user-input-box:focus {
+  outline: none;
 }
 
 ::-webkit-input-placeholder {
@@ -91,10 +96,17 @@ input {
   margin: 0% 5.5%;
 }
 
+.enter-button:focus {
+  outline: none;
+}
+
 .enter-button:hover:enabled {
   background-color: #FFD773;
 }
 
+.enter-button:disabled {
+  background-color: #CFD8DC;
+}
 
 .bookmark-card {
   border: solid;
@@ -102,10 +114,14 @@ input {
   border-color: #607D8B;
   background-color: #FFFFFF;
   width: auto;
-  height: 135px;
+  height: 137px;
   margin: 20px 20px 10px 20px;
   box-sizing: border-box;
 }
+
+/*.bookmark-card-toggle {
+  background-color: #F2F4F4
+}*/
 
 a.bookmark-url {
   color: #607D8B;
@@ -113,6 +129,15 @@ a.bookmark-url {
   border-bottom: solid 1px #F2F4F4;
   height: 22px;
 }
+
+a.bookmark-url:hover {
+  color: #455A64;
+  border-bottom: solid 1px #FFC107;
+}
+
+/*a.bookmark-url-toggle {
+  border-bottom: solid 1px #CFD8DC;
+}*/
 
 span.bookmark-link {
   text-decoration: none;
@@ -139,14 +164,31 @@ span.bookmark-link a{
   width: auto;
   height: 15px;
   margin: 7px 12px 0px 12px;
-  padding: 0px 0px 7px 2px;
+  padding: 0px 0px 7px 0px;
   background-color: #FFFFFF;
   border: none;
   border-bottom: solid 1px #F2F4F4;
 }
 
-.bookmark-read-button {
+.bookmark-read-button:hover, .bookmark-delete-button:hover  {
+  color: #455A64;
+  border-bottom: solid 1px #FFC107;
+}
 
+.bookmark-read-button, .bookmark-delete-button:focus {
+  outline: none;
+}
+
+div.read {
+  background-color: #F2F4F4;
+}
+
+a.read {
+    border-bottom: solid 1px #CFD8DC;
+}
+
+button.read {
+  color: #F05A28;
 }
 
 .bookmark-delete-button {
@@ -159,3 +201,10 @@ span.bookmark-link a{
 .read-button {
   color: #F05A28;
 }
+
+/*//Everything under max width is where the media query will take effect//*/
+/*@media screen and (max-width: 1000px) {
+  .gray-box {
+    background-color: yellow;
+  }
+}*/
