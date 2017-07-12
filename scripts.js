@@ -25,6 +25,8 @@ function makeCard(event) {
      alert("You must have both a title and a url to create a bookmark!");
    } else {bookmarkSection.appendChild(newBookmark);
    };
+  cardCounter();
+
  };
 
 function createBookmark(title,url) {
@@ -43,11 +45,13 @@ function createBookmark(title,url) {
 
   deleteButton.addEventListener('click', function() {
     this.closest('.bookmark-card').remove();
+    cardCounter();
   });
 
 
 
   return newDiv;
+
 };
 
 $('.gray-box').on('click', '.bookmark-read-button', function () {
@@ -57,5 +61,18 @@ $('.gray-box').on('click', '.bookmark-read-button', function () {
       // console.log('readButton')
     });
 
+function cardCounter() {
+  var cardCount = document.querySelectorAll('.gray-box .bookmark-card').length;
+    console.log('Number of bookmark cards is: ', cardCount);
+  var totalBookmarks = document. getElementById('total-bookmarks');
+      totalBookmarks.innerText = cardCount
 
-enterButton.addEventListener('click', makeCard)
+  var readCount = document.querySelectorAll('.gray-box .bookmark-card button.read').length;
+  console.log('Number of read bookmark is: ', readCount);
+  };
+
+//pseudo code what needs to happen for 2.75
+
+
+
+enterButton.addEventListener('click', makeCard);

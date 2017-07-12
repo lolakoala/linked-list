@@ -44,6 +44,14 @@ input {
   display: block;
 }
 
+p {
+  display: inline-block;
+  width: 30%;
+  height: 11%;
+  font-size: 15px;
+  text-align: center;
+  margin: 0% 1%;
+}
 .blue-box {
   background-color: #455A64;
   height: 100%;
@@ -106,6 +114,18 @@ input {
 
 .enter-button:disabled {
   background-color: #CFD8DC;
+}
+
+#total-bookmarks {
+  color: #FFC107;
+}
+
+#read-bookmarks {
+  color: #F05A28;
+}
+
+#unread-bookmarks {
+  color: #CFD8DC;
 }
 
 .bookmark-card {
