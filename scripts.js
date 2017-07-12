@@ -72,7 +72,17 @@ function cardCounter() {
   };
 
 //pseudo code what needs to happen for 2.75
-
+  // target book card with '.read' class active
+    // count number of active .read cards
+    // count should update on click of "readButton"
+      // return number of active .read cards to DOM into #read-bookmarks <p>
+        // update live as cards are toggled read/not read
+  // target book card with '.read' class inactive
+    // count number of inactive .read cards
+    //count should update on click of "readButton"
+      // return number of inactive .read cards to DOM into #read-bookmarks <p>
+        // update live as cards are toggled read/not read
+  // Possible test: read cards + unread cards === total cards
 
 
 enterButton.addEventListener('click', makeCard);
