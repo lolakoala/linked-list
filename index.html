@@ -10,22 +10,28 @@
   <body>
     <section class="blue-box">
       <div class="bookmark-creator">
-        <h1>Linked <img src="linked-list-logo.svg" alt="linking-chains-logo" class="logo"> List</h1>
+        <h1>Linked
+          <img src="linked-list-logo.svg" alt="linking-chains-logo" class="logo">List
+        </h1>
         <form action="">
           <input type="text" placeholder="Website Title" class="user-input-box" id="title-input" required />
           <input type="url" placeholder="Website URL" class="user-input-box" id="url-input" pattern="https?://.+" required />
           <button class="enter-button" disabled>Enter</button>
+          <p class="total" >Total</p>
+          <p class="read">Read</p>
+          <p class="unread">Unread</p>
+          <p class="total" id="total-bookmarks">0</p>
+          <p class="read" id="read-bookmarks">0</p>
+          <p class="unread" id="unread-bookmarks">0</p>
         </form>
-        <p id="total-bookmarks">Total</p>
-        <p id="read-bookmarks">Read</p>
-        <p id="unread-bookmarks">Unread</p>
       </div>
     </section>
 
     <section class="gray-box">
 
     </section>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

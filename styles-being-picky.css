@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   font-family: "Open Sans";
@@ -19,33 +20,24 @@ section {
 h1 {
   color: #FFFFFF;
   display: block;
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 250%;
+  font-weight: 800;
   height: 60px;
-  margin: 0% 5.5% 15% 5.5%;
+  margin: 0% 5.5% 7.5% 5.5%;
   text-align: center;
   width: 89%;
 }
 
 input {
   display: block;
-  font-size: 30px;
-  height: 50px;
-  margin: 12% 5.5% 10% 5.5%;
-  padding: 2px;
-  width: 90%;
-
+  font-size: 20px;
+  height: 60px;
+  margin: 10% 5.5% 10% 5.5%;
+  padding: 4px;
+  width: 89%;
 }
 
 input:focus {
-  outline: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:focus {
   outline: none;
 }
 
@@ -81,26 +73,24 @@ h2 {
 
 .bookmark-creator {
   height: 50%;
-  margin-top: 10%;
+  margin-top: 25%;
 }
 
 .logo {
+  width: 80px;
   height: 60px;
   margin-bottom: -10px;
-  margin-left: -5px;
-  margin-right: 5px;
-  width: 80px;
 }
 
 .enter-button {
-  background-color: #FFC107;
-  border: none;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 15px;
+  border: none;
+  background-color: #FFC107;
+  width: 89%;
   height: 50px;
-  margin: 7% 5.5% 7.5% 5.5%;
-  width: 90%;
+  margin: 0% 5.5% 7.5% 5.5%;
 }
 
 .enter-button:focus {
@@ -129,21 +119,22 @@ h2 {
 
 .gray-box {
   background-color: #CFD8DC;
+  box-sizing: border-box;
   height: 100%;
   overflow-y: scroll;
 }
 
 .bookmark-card {
-  background-color: #FFFFFF;
   border: solid;
-  border-color: #607D8B;
   border-width: 2px;
+  border-color: #607D8B;
+  background-color: #FFFFFF;
   height: 150px;
   margin: 4% 4% 2% 4%;
   width: auto;
 }
 
-.bookmark-url {
+a.bookmark-url {
   border-bottom: solid 1px #F2F4F4;
   color: #607D8B;
   display: inline-block;
@@ -151,17 +142,18 @@ h2 {
   text-decoration: none;
 }
 
-.bookmark-url:hover {
+a.bookmark-url:hover {
   border-bottom: solid 1px #FFC107;
   color: #455A64;
 }
 
-.bookmark-link {
+span.bookmark-link {
   border-bottom: solid 2px #CFD8DC;
   display: block;
   height: 24px;
   margin: 5px 12px 0px 12px;
   padding: 14px 0px 40px 2px;
+  text-decoration: none;
 }
 
 .button-flex-box {
@@ -204,78 +196,60 @@ a.read {
   background-color: #F2F4F4;
 }
 
+#total-bookmarks {
+  color: #FFC107;
+}
+
+#read-bookmarks {
+  color: #F05A28;
+}
+
+#unread-bookmarks {
+  color: #CFD8DC;
+}
+
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 38px;
-    margin-bottom: 0;
+    font-size: 45px;
   }
 
   .logo {
-    height: 60px;
-    margin-bottom: -15px;
-    margin-right: 5px;
-    width: 50px;
+    width: 45px;
+    height: 33.75px;
+    margin: 0;
   }
-
-  .bookmark-creator {
-    margin-top: 32%;
-}
 }
 
 @media screen and (max-width: 610px) {
   h1 {
-    font-size: 34px;
-    margin-bottom: 28px;
+    font-size: 175%
   }
-
-  .logo {
-    margin: 0 4px -15px 0;
-  }
-
-  .bookmark-creator {
-    margin-top: 50%;
-}
 
   input {
     height: 40px;
-    margin: 0 5.5% 10% 5.5%;
   }
 
-  .enter-button{
-    height: 40px;
-    margin: 2% 5% 5% 5%;
-    width: 90%;
+  .enter-button {
+    height: 30px;
+  }
 }
 
 @media screen and (max-width: 560px) {
   h1 {
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 125%
   }
 
   .logo {
-    width: 38px;
-    height: 27px;
-    margin-bottom: -2px;
+    width: 30px;
+    height: 22.5px;
+    margin: 0;
   }
-
-  .bookmark-creator {
-    margin-top: 70%;
-}
-
 }
 
 @media screen and (max-width: 450px) {
   h1 {
-    font-size: 25px;
-    margin-bottom: 10px;
+    font-size: 100%
   }
-
-  .bookmark-creator {
-    margin-top: 85%;
-}
-
-
 }
 
 @media screen and (max-width: 415px) {
@@ -289,7 +263,6 @@ a.read {
 
   h1 {
     font-size: 200%;
-    font-weight: 700;
     height: 40px;
     margin: 5% 5.5% 7.5% 5.5%;
   }
@@ -302,7 +275,7 @@ a.read {
   }
 
   .gray-box {
-    margin-top: 84%;
+    margin-top: 87%;
   }
 
   .bookmark-creator {
@@ -322,10 +295,6 @@ a.read {
     margin: 0 5% 5% 5%;
     width: 90%;
   }
-
-  .bookmark-card {
-    margin: 5% 4% 2% 4%;
-}
 
   .logo {
     height: 40px;
